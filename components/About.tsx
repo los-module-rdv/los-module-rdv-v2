@@ -374,8 +374,13 @@ const About = () => {
                   </p>
                   
                   <button 
+                    onClick={() => {
+                      const contactSection = document.getElementById('contact');
+                      if (contactSection) {
+                        contactSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                     className="btn-primary px-8 py-4 rounded-full text-white font-semibold flex items-center space-x-3 mx-auto group/btn relative overflow-hidden"
-                    onClick={() => setIsAppointmentModalOpen(true)}
                   >
                     <span className="relative z-10">Contactez-moi</span>
                     <ArrowRight className="w-5 h-5 relative z-10 group-hover/btn:translate-x-1 transition-transform" />

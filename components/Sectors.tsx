@@ -224,7 +224,12 @@ const Sectors = () => {
                 Chaque projet est unique. Discutons de vos besoins spécifiques et voyons comment mes compétences peuvent s'adapter à votre domaine.
               </p>
               <button 
-                onClick={() => setIsAppointmentModalOpen(true)}
+                onClick={() => {
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
                 className="btn-primary px-8 py-3 rounded-full text-white font-medium flex items-center space-x-2 mx-auto hover:shadow-lg transition-all"
               >
                 <span>Parlons de votre projet</span>
