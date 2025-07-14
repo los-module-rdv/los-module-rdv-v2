@@ -14,6 +14,7 @@ import {
 } from '@/components/forms';
 import { Card } from '@/components/ui';
 import { ScrollTriggeredAnimation } from '@/components/animations';
+import AppointmentModal from '@/components/appointment/AppointmentModal';
 import { 
   User, 
   Mail, 
