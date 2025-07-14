@@ -378,7 +378,12 @@ const Projects = () => {
                   <span>Voir GitHub</span>
                 </button>
                 <button 
-                  onClick={() => setIsAppointmentModalOpen(true)}
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                   className="px-6 py-3 rounded-full border border-[#00F5FF] text-[#00F5FF] hover:bg-[#00F5FF] hover:text-white transition-all flex items-center space-x-2"
                 >
                   <span>Démarrer un projet</span>
